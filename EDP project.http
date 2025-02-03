@@ -1,0 +1,79 @@
+@EDP_project_HostAddress = https://localhost:7277
+
+GET {{EDP_project_HostAddress}}/cateringorder
+
+###
+
+POST {{EDP_project_HostAddress}}/cateringorder
+Content-Type: application/json
+
+{
+  "CateringOrderID": "2",
+  "ForeignUserID": "1",
+  "Name": "John",
+  "MobileNumber": "90916612",
+  "Email": "john@gmail.com",
+  "CateringServiceType": "A",
+  "Location": "Address"
+}
+
+###
+
+GET {{EDP_project_HostAddress}}/classbooking
+
+###
+
+POST {{EDP_project_HostAddress}}/classbooking
+Content-Type: application/json
+
+{
+  "ClassBookingID": "1",
+  "ForeignUserID": "1",
+  "Name": "John",
+  "MobileNumber": "90916612",
+  "Email": "john@gmail.com",
+  "ClassType": "A",
+  "Session": "1",
+  "BYOC": true
+}
+
+###
+
+@id=1
+PUT {{EDP_project_HostAddress}}/cateringorder/{{id}}
+Content-Type: application/json
+
+{
+  "Name": "Alice",
+  "MobileNumber": "90916612",
+  "Email": "alice@gmail.com",
+  "CateringServiceType": "B",
+  "Location": "Address"
+}
+
+###
+
+@id=1
+PUT {{EDP_project_HostAddress}}/classbooking/{{id}}
+Content-Type: application/json
+
+{
+  "Name": "Alice",
+  "MobileNumber": "90916612",
+  "Email": "alice@gmail.com",
+  "ClassType": "B",
+  "Session": "2",
+  "BYOC": false
+}
+
+###
+
+@id=1
+DELETE {{EDP_project_HostAddress}}/cateringorder/{{id}}
+
+###
+
+@id=1
+DELETE {{EDP_project_HostAddress}}/classbooking/{{id}}
+
+###
