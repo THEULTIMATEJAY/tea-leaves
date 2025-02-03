@@ -1,4 +1,4 @@
-@tea_leaves_HostAddress = http://localhost:5184
+@tea_leaves_HostAddress = https://localhost:7045
 
 GET {{tea_leaves_HostAddress}}/weatherforecast/
 Accept: application/json
